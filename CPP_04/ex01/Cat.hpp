@@ -2,6 +2,7 @@
 #define CAT_H
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -12,6 +13,11 @@ class Cat : public Animal
 		Cat& operator=(const Cat & rhs);
 
 		void makeSound( void ) const;
+		std::string getIdea(int index);
+		void setIdea(int index);
+		
+	private:
+		Brain *_brain;
 
 };
 

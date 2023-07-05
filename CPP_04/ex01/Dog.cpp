@@ -3,19 +3,31 @@
 Dog::Dog( void ) : Animal()
 {
 	this->type = "Dog";
-	this->_brain = new Brain();
 	std::cout << "Dog constructor called" << std::endl;
+	this->_brain = new Brain();
 }
 
 Dog::~Dog( void )
 {
-	std::cout << "Dog destructor called" << std::endl;
+	
 	delete _brain;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 void Dog::makeSound( void ) const
 {
 	std::cout << "Wouf Wouf" << std::endl;
+}
+
+
+void Dog::setIdea( int index, std::string ideaToBeSet )
+{
+	this->_brain->setIdea(index, ideaToBeSet);
+}
+
+std::string Dog::getIdea( int index ) const
+{
+	return (this->_brain->getIdea(index));
 }
 
 Dog& Dog::operator=(const Dog & rhs)

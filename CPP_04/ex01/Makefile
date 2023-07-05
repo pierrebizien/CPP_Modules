@@ -4,6 +4,7 @@ SRCS +=  Cat.cpp
 SRCS +=  Animal.cpp
 SRCS +=  WrongAnimal.cpp
 SRCS +=  WrongCat.cpp
+SRCS +=  Brain.cpp
 
 
 

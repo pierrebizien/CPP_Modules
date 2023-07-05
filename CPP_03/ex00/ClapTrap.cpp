@@ -25,6 +25,12 @@ ClapTrap &ClapTrap::operator=(ClapTrap const & rhs)
 
 }
 
+ClapTrap::ClapTrap(ClapTrap const & toBeCopied)
+{
+	std::cout << "ClapTrap copy constructor called" << std::endl;
+	*this = toBeCopied;
+}
+
 void ClapTrap::attack(const std::string& target)
 {
 	if (this->_hitPoints <= 0)

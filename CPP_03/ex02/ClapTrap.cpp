@@ -25,13 +25,10 @@ ClapTrap &ClapTrap::operator=(ClapTrap const & rhs)
 
 }
 
-ClapTrap::ClapTrap( ClapTrap & toBeCopied)
+ClapTrap::ClapTrap(ClapTrap const & toBeCopied)
 {
-	this->_name = toBeCopied._name;
-	this->_hitPoints = toBeCopied._hitPoints;
-	this->_energyPoints = toBeCopied._energyPoints;
-	this->_attackDamage = toBeCopied._attackDamage;
-
+	std::cout << "ClapTrap copy constructor called" << std::endl;
+	*this = toBeCopied;
 }
 
 void ClapTrap::attack(const std::string& target)
