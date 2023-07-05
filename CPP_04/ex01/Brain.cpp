@@ -19,6 +19,7 @@ Brain::Brain ( Brain const & toBeCopied)
 
 Brain & Brain::operator=(Brain const & rhs)
 {
+	std::cout << "Brain assignement operator called" << std::endl;
 	int i = 0;
 
 	while (i < 100)
