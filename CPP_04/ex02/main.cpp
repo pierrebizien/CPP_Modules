@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Dog.hpp"
@@ -8,12 +8,13 @@ int main()
 {
 
 	{
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-		const Animal* k = new Dog();
+		const AAnimal* j = new Dog();
+		// const AAnimal* m = new AAnimal();
+		const AAnimal* i = new Cat();
+		const AAnimal* k = new Dog();
 		std::cout << k << std::endl;
-		const Animal* l = new Cat();
-		const Animal* tab[4] = {j, i, k, l};
+		const AAnimal* l = new Cat();
+		const AAnimal* tab[4] = {j, i, k, l};
 		std::cout << std::endl << std::endl;
 
 

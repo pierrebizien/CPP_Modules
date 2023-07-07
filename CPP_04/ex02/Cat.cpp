@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat( void ) : Animal()
+Cat::Cat( void ) : AAnimal()
 {
 	this->type = "Cat";
 	std::cout << "Cat constructor called" << std::endl;
@@ -13,7 +13,7 @@ Cat::~Cat( void )
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat::Cat( Cat const & tobeCopied) : Animal()
+Cat::Cat( Cat const & tobeCopied) : AAnimal()
 {
 	this->_brain = NULL;
 	std::cout << "Cat copy constructor called" << std::endl;

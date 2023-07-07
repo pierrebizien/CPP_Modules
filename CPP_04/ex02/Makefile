@@ -1,7 +1,7 @@
 SRCS +=  main.cpp
 SRCS +=  Dog.cpp
 SRCS +=  Cat.cpp
-SRCS +=  Animal.cpp
+SRCS +=  AAnimal.cpp
 SRCS +=  WrongAnimal.cpp
 SRCS +=  WrongCat.cpp
 SRCS +=  Brain.cpp
@@ -10,14 +10,14 @@ SRCS +=  Brain.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-NAME = ex00
+NAME = ex02
 
 .cpp.o:
 	g++ -c -Wall -Werror -Wextra -std=c++98 $< -o ${<:.cpp=.o}
 
 all: ${NAME}
 
-${NAME}: ${OBJS} Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+${NAME}: ${OBJS} AAnimal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 	g++ -g -Wall -Werror -Wextra -std=c++98 ${OBJS} -o ${NAME}
 
 clean: 

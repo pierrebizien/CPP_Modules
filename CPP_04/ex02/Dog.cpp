@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog( void ) : Animal()
+Dog::Dog( void ) : AAnimal()
 {
 	this->type = "Dog";
 	std::cout << "Dog constructor called" << std::endl;
@@ -14,7 +14,7 @@ Dog::~Dog( void )
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog::Dog( Dog const & tobeCopied) : Animal()
+Dog::Dog( Dog const & tobeCopied) : AAnimal()
 {
 	this->_brain = NULL;
 	std::cout << "Dog copy constructor called" << std::endl;
